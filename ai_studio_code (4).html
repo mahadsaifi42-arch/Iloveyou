@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10 Months with Fatima 🤍</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;1,400&family=Montserrat:wght@300;400;500&display=swap');
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            background-color: #ffffff;
+            font-family: 'Montserrat', sans-serif;
+            color: #1a1a1a;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        /* Main Aesthetic Frame with Thin Black Border */
+        .frame {
+            width: 90%;
+            max-width: 400px;
+            height: 85vh;
+            border: 0.8px solid #1a1a1a;
+            position: relative;
+            padding: 30px 20px;
+            background: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+        }
+
+        /* Pages System */
+        .page {
+            display: none;
+            width: 100%;
+            animation: fadeIn 1s ease-in-out forwards;
+        }
+        .active { 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            justify-content: center;
+        }
+
+        @keyframes fadeIn { from { opacity: 0; transform: scale(0.99); } to { opacity: 1; transform: scale(1); } }
+
+        /* Typography */
+        h1 { font-family: 'Playfair Display', serif; font-weight: 400; font-size: 1.5rem; letter-spacing: 3px; margin-bottom: 20px; text-transform: uppercase; }
+        p { font-size: 0.85rem; line-height: 1.8; color: #444; margin-bottom: 20px; letter-spacing: 0.5px; }
+        .urdu { font-family: 'Playfair Display', serif; font-style: italic; font-size: 0.95rem; color: #000; line-height: 2; font-weight: 400; }
+
+        /* Images Container */
+        .img-container {
+            width: 100%;
+            max-height: 240px;
+            margin-bottom: 25px;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            border-radius: 4px;
+        }
+        .memory-img {
+            max-width: 100%;
+            max-height: 240px;
+            object-fit: contain;
+            transition: 0.5s;
+        }
+
+        /* Elegant Navigation Buttons */
+        .nav-btn {
+            background: transparent;
+            border: 1px solid #1a1a1a;
+            padding: 10px 25px;
+            font-family: 'Playfair Display', serif;
+            font-size: 0.75rem;
+            cursor: pointer;
+            transition: 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: 15px;
+        }
+        .nav-btn:hover { background: #1a1a1a; color: white; }
+
+        /* Rapid Fire Styling */
+        .quiz-box { width: 100%; margin-bottom: 10px; }
+        .quiz-option {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            border: 0.5px solid #ddd;
+            margin-bottom: 8px;
+            cursor: pointer;
+            font-size: 0.75rem;
+            transition: 0.3s;
+            background: #fff;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .quiz-option:hover { border-color: #1a1a1a; background: #fafafa; }
+
+        /* Floating Hearts Animation */
+        .heart { position: absolute; font-size: 14px; color: #ffccd5; pointer-events: none; animation: floatUp 7s linear infinite; opacity: 0.6; z-index: 0; }
+        @keyframes floatUp { 0% { transform: translateY(100vh) rotate(0deg); opacity: 0; } 50% { opacity: 0.8; } 100% { transform: translateY(-10vh) rotate(360deg); opacity: 0; } }
+
+    </style>
+</head>
+<body>
+
+    <div class="frame">
+        
+        <!-- PAGE 1: OPENING -->
+        <div class="page active" id="p1">
+            <h1>10 Months</h1>
+            <p>And Still It Feels Like The Beginning 🤍</p>
+            <button class="nav-btn" onclick="showPage(2)">Open Memories</button>
+        </div>
+
+        <!-- PAGE 2: HELLO (Image 1) -->
+        <div class="page" id="p2">
+            <h1>The First Hello</h1>
+            <p>Everything started with this. Fatima, tab humein nahi pata tha ke hum yahan tak pahunchenge.</p>
+            <div class="img-container">
+                <img src="Screenshot_2026-04-17-00-15-25-561_com.discord.png" class="memory-img">
+            </div>
+            <button class="nav-btn" onclick="showPage(3)">Next Memory</button>
+        </div>
+
+        <!-- PAGE 3: BHAIYA (Image 4) -->
+        <div class="page" id="p3">
+            <h1>The Growth</h1>
+            <p>Yaad hai? Jab aap mujhe "Bhaiya" kehti thin? Wahan se "Rexx" tak ka safar meri kismat hai.</p>
+            <div class="img-container">
+                <img src="Screenshot_2026-04-17-00-26-49-443_com.discord.png" class="memory-img">
+            </div>
+            <button class="nav-btn" onclick="showPage(4)">The Effort</button>
+        </div>
+
+        <!-- PAGE 4: 200K MSG (Image 3) -->
+        <div class="page" id="p4">
+            <h1>Our Conversations</h1>
+            <p>Do laakh se zyada messages... Har ek lafz mein humne ek nayi kahani likhi hai.</p>
+            <div class="img-container">
+                <img src="Screenshot_2026-04-17-00-20-20-700_com.discord.png" class="memory-img">
+            </div>
+            <button class="nav-btn" onclick="showPage(5)">My Promise</button>
+        </div>
+
+        <!-- PAGE 5: PAK AANE KA WADA (Image 5) -->
+        <div class="page" id="p5">
+            <h1>The Commitment</h1>
+            <p>"Main aaunga... ek din zarur aaunga vaha."<br>I felt this in my soul when I typed it.</p>
+            <div class="img-container">
+                <img src="Screenshot_2026-04-17-00-24-51-096_com.discord.png" class="memory-img">
+            </div>
+            <button class="nav-btn" onclick="showPage(6)">Rapid Fire</button>
+        </div>
+
+        <!-- PAGE 6: RAPID FIRE -->
+        <div class="page" id="p6">
+            <h1>Rapid Fire 🔥</h1>
+            <div class="quiz-box">
+                <div class="quiz-option" onclick="alert('Correct! Sirf Aap! ❤️')">Rexx ka sukoon kahan hai?</div>
+                <div class="quiz-option" onclick="alert('Hamesha! 🤞')">Kya Rexx hamesha sath rahega?</div>
+                <div class="quiz-option" onclick="alert('Aapka mujhpe haq jatana! 🥰')">Rexx ki fav habit?</div>
+            </div>
+            <button class="nav-btn" onclick="showPage(7)">More...</button>
+        </div>
+
+        <!-- PAGE 7: SUKOON -->
+        <div class="page" id="p7">
+            <h1>What You Are To Me</h1>
+            <p>You aren't just a habit, Fatima. You are my peace. Mere har din ki shuruaat aur khatam aap hi par hoti hai.</p>
+            <p class="urdu">"Aap meri wo khamoshi ho jise main har roz sunna chahta hoon."</p>
+            <button class="nav-btn" onclick="showPage(8)">The Big Moment</button>
+        </div>
+
+        <!-- PAGE 8: NIKKAH - LAST SECOND (Image 2) -->
+        <div class="page" id="p8">
+            <h1>The Nikkah</h1>
+            <p class="urdu">Mahad saifi apka nikkah Syeda Fatima Israr sa HOTA ha Kya apko ya NIKKAH Qubool ha?</p>
+            <p><strong>Qubool Hai. Qubool Hai. Qubool Hai.</strong></p>
+            <div class="img-container">
+                <img src="Screenshot_2026-04-17-00-17-56-804_com.discord.png" class="memory-img">
+            </div>
+            <button class="nav-btn" onclick="showPage(9)">My Last Word</button>
+        </div>
+
+        <!-- PAGE 9: THE ULTIMATE PROMISE (URDU PARA) -->
+        <div class="page" id="p9">
+            <h1>Mera Wada ❤️</h1>
+            <div class="urdu" style="text-align: left; padding: 5px; font-size: 0.85rem;">
+                Syeda Fatima Israr... <br><br>
+                Aaj 10 mahine ho gaye, par lagta hai jaise sadiyon se aap meri rooh ka hissa hain. Main aaj aap se wada karta hoon ke chahe rasta kitna bhi mushkil ho, Rexx kabhi aapka haath nahi chhodega. <br><br>
+                Aap meri izzat hain, meri hansi hain, aur mera ghar hain. Main hamesha aapke sath rahunga, aapki fikr karunga aur aapko duniya ki har khushi dene ki koshish karunga. <br><br>
+                Rexx Sirf Aapka Hai. Hamesha Ke Liye. 🤍
+            </div>
+            <button class="nav-btn" onclick="reveal()">Seal This Promise</button>
+            <div id="final-reveal" style="display:none; margin-top:15px; font-weight:bold; font-size: 0.75rem; letter-spacing: 2px;">
+                I NEVER CHANGED MY CHOICE.<br>IT WAS ALWAYS YOU.
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function showPage(pageNumber) {
+            document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+            document.getElementById('p' + pageNumber).classList.add('active');
+        }
+
+        function reveal() {
+            document.getElementById('final-reveal').style.display = 'block';
+            for(let i=0; i<30; i++) { setTimeout(createHeart, i * 100); }
+        }
+
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            heart.innerHTML = '🤍';
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDuration = Math.random() * 3 + 5 + 's';
+            document.body.appendChild(heart);
+            setTimeout(() => { heart.remove(); }, 7000);
+        }
+        setInterval(createHeart, 600);
+    </script>
+</body>
+</html>
